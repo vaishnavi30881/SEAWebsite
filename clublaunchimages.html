@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clublaunch Images</title>
+
+<style>
+  body{
+  margin:0;
+  
+  display:grid;
+  place-items:center;
+  background-color:white;
+}
+
+.gallery{
+  position:relative;
+  width:300px;
+  height:200px;
+  transform-style:preserve-3d;
+  animation:rotate 35s linear infinite;
+}
+
+@keyframes rotate{
+  from{
+    transform:perspective(1200px) rotateY(0deg);
+  }
+  
+  to{
+    transform:perspective(1200px) rotateY(360deg);
+  }
+}
+
+.gallery span{
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform-origin:center;
+  transform-style:preserve-3d;
+  transform:rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+}
+
+.gallery span img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PBKT0S2rAOp6HIw7b1RGcNjkDw0i6U3Ll4m5INPyD2eF9s" crossorigin="anonymous">
+</head>
+<body>
+    <div class="gallery">
+        <span style="--i:1">
+          <img src="images/clublaunch/101.jpg" alt="" />
+        </span>
+        <span style="--i:2">
+          <img src="images/clublaunch/102.jpg" alt="" />
+        </span>
+        <span style="--i:3">
+          <img src="images/clublaunch/103.jpg" alt="" />
+        </span>
+        <span style="--i:4">
+          <img src="images/clublaunch/104.jpg" alt="" />
+        </span>
+        <span style="--i:5">
+          <img src="images/clublaunch/105.jpg" alt="" />
+        </span>
+        <span style="--i:6">
+          <img src="images/clublaunch/106.jpg" alt="" />
+        </span>
+        <span style="--i:7">
+          <img src="images/clublaunch/107.jpg" alt="" />
+        </span>
+        <span style="--i:8">
+          <img src="images/clublaunch/108.jpg" alt="" />
+        </span>
+        <span style="--i:9">
+            <img src="images/clublaunch/109.jpg" alt="" />
+          </span>
+      </div>
+    
+</body>
+</html>

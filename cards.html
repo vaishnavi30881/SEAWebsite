@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Add this link for Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        max-width: 100%;
+      }
+
+      .container .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+        overflow: hidden;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container .card .content {
+        position: absolute;
+        bottom: -160px;
+        width: 100%;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        flex-direction: column;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        transition: bottom 0.5s;
+        transition-delay: 0.65s;
+      }
+
+      .container .card:hover .content {
+        bottom: 0;
+        transition-delay: 0s;
+      }
+
+      .container .card .content .contentBx h3 {
+        text-transform: uppercase;
+        color: #0c0c0c;
+        letter-spacing: 2px;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        margin: 20px 0 15px;
+        line-height: 1.1em;
+        transition: 0.5s;
+        transition-delay: 0.6s;
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      .container .card:hover .content .contentBx h3 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .container .card .content .contentBx h3 span {
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: initial;
+      }
+
+      .container .card .content .sci {
+        position: relative;
+        bottom: 10px;
+        display: flex;
+      }
+
+      .container .card .content .sci li {
+        list-style: none;
+        margin: 0 10px;
+        transform: translateY(40px);
+        transition: 0.5s;
+        opacity: 0;
+        transition-delay: calc(0.2s * var(--i));
+      }
+
+      .container .card:hover .content .sci li {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .container .card .content .sci li a {
+        color: black;
+        font-size: 24px;
+      }
+
+      .container .card .imgBx {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .container .card .imgBx img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media screen and (max-width: 767px) {
+        .container .card {
+          width: calc(50% - 20px); /* Adjust the width for smaller screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Third Section - Creators' Details -->
+    <section
+      class="section parallax"
+      id="about"
+      style="background-image: url('blob-scene-haikei.svg')"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/gova.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>Devu Govardhan <br /><span>President</span></h3>
+                  <h3 style="color: transparent">Gorra</h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/sam1.png" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>
+                    Venkata Anantha Sai S <br /><span>Vice - President</span>
+                  </h3>
+                  <h3 style="color: transparent">sam</h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="https://github.com/Potharlanka-Goutham"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a
+                      href="https://www.linkedin.com/in/goutham-potharlanka-904027226/"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/ananya.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>K Ananya Sai <br /><span>Secretary</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      <div class="container">
+        <div class="row">
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/dd2.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>
+                    P Dinesh Venkata Sai Teja <br /><span
+                      >Director MERN Stack</span
+                    >
+                  </h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/goutham.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>P Goutham <br /><span>Designing Lead</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="https://github.com/Potharlanka-Goutham"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a
+                      href="https://www.linkedin.com/in/goutham-potharlanka-904027226/"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/vedasaipriya.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>
+                    I Veda Sai Priya<br /><span
+                      >Director Python Full Stack
+                    </span>
+                  </h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+      <div class="container">
+        <div class="row">
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/mokshitha.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>
+                    N Mokshitha <br /><span>Director Java Full Stack</span>
+                  </h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/bittu.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>
+                    V Venkata Anjani Dheeraj <br /><span>DevOps Lead</span>
+                  </h3>
+                  <h3 style="color: transparent">BITTU</h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="https://github.com/Potharlanka-Goutham"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a
+                      href="https://www.linkedin.com/in/goutham-potharlanka-904027226/"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/shalini.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>B SHALINI <br /><span>DEVOPS CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+      <div class="container">
+        <div class="row">
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/vaishnavi.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>V VAYSHNAVI <br /><span>DEVOPS CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="./images/profiles/akshaya.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>N AKSHAYA<br /><span>DJANGO CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="https://github.com/Potharlanka-Goutham"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a
+                      href="https://www.linkedin.com/in/goutham-potharlanka-904027226/"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/surya.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>SURYA PAVAN<br /><span>DEVOPS CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+      <div class="container">
+        <div class="row">
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/karthekeya.png" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>KSKLN KARTHIKEYA<br /><span>DJANGO CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/krishtej.png" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>A KRISHNA TEJA <br /><span>DJANGO CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="https://github.com/Potharlanka-Goutham"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a
+                      href="https://www.linkedin.com/in/goutham-potharlanka-904027226/"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/jithendra.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>NAGA JITHENDRA <br /><span>DJANGO CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+      <div class="container">
+        <div class="row">
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/manasa.png" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>MANASA KALYANAM <br /><span>MERN CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/harikrishna.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>
+                    GRANDHI GUNA SAI HARI KRISHNA <br /><span>IRP LEAD</span>
+                  </h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="https://github.com/Potharlanka-Goutham"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a
+                      href="https://www.linkedin.com/in/goutham-potharlanka-904027226/"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/kalyan.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>D KALYAN KUMAR REDDY <br /><span>MERN CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/sainadh.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>J SAINADH <br /><span>DEVOPS CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/karthik.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>K KARTHIK <br /><span>DEVOPS CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="https://github.com/Potharlanka-Goutham"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a
+                      href="https://www.linkedin.com/in/goutham-potharlanka-904027226/"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/abdulr.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>SK ABDUL ROHAN <br /><span>IRP CORE</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="./images/profiles/dineshy.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>Y DINESH KUMAR <br /><span>DESIGNING TEAM</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/nagapraneetha.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>B NAGA PRANITHA <br /><span>DRAFTING LEAD</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/vvnsainadh.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>
+                    VVN SAINADH <br /><span>MARKETING AND PROMOTIONS LEAD</span>
+                  </h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/sadiya.jpeg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>SHAIK SADIYA <br /><span>DRAFTING TEAM</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/mukhi.jpeg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>SHANMUKHI POLURI <br /><span>JR DEV</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/somshekar.jpeg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>SOM SEKHAR<br /><span>JR DEV</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/sharuk.jpeg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>SHARUKH<br /><span>JR DEV</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/krishpra.jpeg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>SSB KRISHNA PRASAD <br /><span>JR DEV</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/rahem.jpeg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>ABDUL RAHIM <br /><span>JR DEV</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/vardhan.jpeg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>V HARSHA VARDHAN <br /><span>JR DEV</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/ayyappa.png" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>V SWAMI AYYAPPA <br /><span>JR DEV</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/vinai.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>VINAI KUMAR <br /><span>PROMOTIONS</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/akhil.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>AKHIL BAGESH <br /><span>PROMOTIONS</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/shameer.jpeg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>D SHAMEER BHASHA<br /><span>JR DEV</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-4">
+            <div class="card">
+              <div class="imgBx">
+                <img src="images/profiles/vijaym.jpg" alt="" />
+              </div>
+              <div class="content">
+                <div class="contentBx">
+                  <h3>VIJAY M<br /><span>JR DEV</span></h3>
+                </div>
+                <ul class="sci pr-5">
+                  <li style="--i: 1">
+                    <a href="#"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 2">
+                    <a href="#"
+                      ><i class="fa fa-github" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                  <li style="--i: 3">
+                    <a href="#"
+                      ><i class="fa fa-linkedin" aria-hidden="true"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEA|Gallery</title>
+    <link rel="icon" type="image/x-icon" href="/images/sea.png" style="object-fit: fill;">
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+
+    <link href="css/magnific-popup.css" rel="stylesheet" />
+
+    <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet" />
+
+    <style>
+      .cards-list {
+        z-index: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        margin: 30px auto;
+        width: 300px;
+        height: 300px;
+        border-radius: 40px;
+        box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+          -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+        cursor: pointer;
+        transition: 0.4s;
+        overflow: hidden;
+        text-decoration: none; /* Remove underline for anchor */
+        flex-direction: column;
+        justify-content: flex-end; /* Align text to the bottom */
+      }
+
+      .card .card_image {
+        width: inherit;
+        height: inherit;
+        border-radius: 40px;
+        overflow: hidden;
+      }
+
+      .card .card_image img {
+        width: inherit;
+        height: inherit;
+        border-radius: 40px;
+        object-fit: cover;
+      }
+
+      .card .card_title {
+        text-align: center;
+        border-radius: 0px 0px 40px 40px;
+        font-family: "DM Sans", sans-serif;
+        font-weight: bold;
+        font-size: 20px; /* Adjust font size */
+        color: white; /* Adjust text color */
+        background: rgba(0, 0, 0, 0.7); /* Add background color */
+        padding: 10px; /* Add padding for better visibility */
+      }
+
+      .card:hover {
+        transform: scale(0.9, 0.9);
+        box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+          -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+      }
+
+      @media all and (max-width: 500px) {
+        .cards-list {
+          /* On small screens, we are no longer using row direction but column */
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="preloader">
+      <div class="spinner">
+        <span class="spinner-rotate"></span>
+      </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg" >
+      <div class="container">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="index.html"> <div style="height: 150px; width: 150px; background-image: url(images/sea.png); background-size: cover; background-repeat: no-repeat; margin-top: -10px;"></div></a>  
+          <a href="index.html" class="navbar-brand mx-auto mx-lg-0" style="color: black;" >S.E.A</a>
+
+          <div class="d-flex align-items-center d-lg-none">
+              <i class="navbar-icon bi-telephone-plus me-3"></i>
+              <a class="custom-btn btn" href="#section_5">
+                  120-240-9600
+              </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-lg-5">
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="index.html" style="color: black;">Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="index.html#section_2" style="color: black;">About</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="index.html#section_3" style="color: black;">Wings</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="index.html#section_4" style="color: black;">Projects</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link click-scroll" href="index.html#section_5"style="color: black;">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link click-scroll" href="./galleryinterface.html" style="color: black;">Gallery</a>
+                </li>
+              </ul>
+              <div class="d-lg-flex align-items-center d-none ms-auto">
+                <!-- Replace the existing icon with your SVG code -->
+               
+                
+                <a class="custom-btn btn" href="#section_5" style="color: orange;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-check-fill me-3" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207z"/>
+                        <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
+                    </svg>
+                    Join Our Commuity Today!
+                </a>
+            </div>
+              </div>
+          </div>
+
+      </div>
+  </nav>
+<br><br>
+    <main>
+      <section class="about section-padding" >
+        <div class="cards-list">
+          <a href="clublaunch.html" class="card">
+            <div class="card_image"><img src="https://seaclub-17faf.firebaseapp.com/images/108.jpg" /></div>
+            <div class="card_title">
+              <p style="color: white">S.E.A Club Launch</p>
+            </div>
+          </a>
+
+          <a href="https://seaclub-17faf.firebaseapp.com/workshopevents.html"
+          target="_blank" class="card">
+            <div class="card_image"><img src="https://seaclub-17faf.firebaseapp.com/images/workshop/14.jpg" /></div>
+            <div class="card_title">
+              <p style="color: white">Workshops</p>
+            </div>
+          </a>
+
+          <a href="https://seaclub-17faf.firebaseapp.com/socialevents.html" target="_blank"class="card">
+            <div class="card_image"><img src="https://seaclub-17faf.firebaseapp.com/images/social/37.jpg" /></div>
+            <div class="card_title">
+              <p style="color: white">Socail Aspects</p>
+            </div>
+          </a>
+
+          <a href="https://seaclub-17faf.firebaseapp.com/gl.html" target="_blank" class="card">
+            <div class="card_image">
+              <img src="https://seaclub-17faf.firebaseapp.com/images/206.jpg" />
+            </div>
+            <div class="card_title">
+              <p style="color: white">Guest Lectures</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
